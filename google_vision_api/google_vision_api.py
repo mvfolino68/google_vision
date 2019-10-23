@@ -16,16 +16,18 @@ from email import encoders
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/content/sturdy-spanner-221114-891167b05110.json"
 
+class FeatureType(Enum):
+PAGE = 1
+BLOCK = 2
+PARA = 3
+WORD = 4
+SYMBOL = 5
+
 class ImageToProcess:
   def __init__(self, image_url, to_addr):
     self.image_url = image_url
     self.to_addr = to_addr
-  class FeatureType(Enum):
-    PAGE = 1
-    BLOCK = 2
-    PARA = 3
-    WORD = 4
-    SYMBOL = 5
+
 
   def render_doc_text(self, fileout):
     self.fileout = fileout
