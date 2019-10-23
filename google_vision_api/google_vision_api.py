@@ -1,5 +1,7 @@
 import os
 import io
+import os
+import io
 import requests
 import argparse
 from enum import Enum
@@ -17,11 +19,11 @@ from email import encoders
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/content/sturdy-spanner-221114-891167b05110.json"
 
 class FeatureType(Enum):
-  PAGE = 1
-  BLOCK = 2
-  PARA = 3
-  WORD = 4
-  SYMBOL = 5
+	PAGE = 1
+	BLOCK = 2
+	PARA = 3
+	WORD = 4
+	SYMBOL = 5
 
 class ImageToProcess:
   def __init__(self, image_url, to_addr):
